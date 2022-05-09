@@ -1,1 +1,2 @@
 # Assign-04-PHP-Crepe
+[![GitHub's Super Linter](https://github.com/ICS20-Programming-Graeme-Barbe/Assign-04-PHP-Crepe/workflows/GitHub's%20Super%20Linter/badge.svg)](https://github.com/ICS20-Programming-Graeme-Barbe/Assign-04-PHP-Crepe/actions)
