@@ -1,0 +1,66 @@
+/* Color changes */
+body{
+	background-color: #957DAD;
+}
+
+h5 {
+	background-color: #ffd42c;
+	padding: 15px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/* This centers the text in the MDL header */
+.mdl-layout__header-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+}
+
+/* Text alignement for toppings */
+#Bacon {
+	position: relative;
+	top: 2px;
+}
+
+#Cheese {
+	position: relative;
+	top: 2px;
+}
+
+#Spinach {
+	position: relative;
+	top: 2px;
+}
+
+#redPepper {
+	position: relative;
+	top: 2px;
+}
+
+#Ham {
+	position: relative;
+	top: 2px;
+}
+
+/* Text alignement for drinks */
+#No {
+	position: relative;
+	top: 2px;
+}
+
+#Milkshake {
+	position: relative;
+	top: 2px;
+}
+
+#Coffee {
+	position: relative;
+	top: 2px;
+}
+
+#Tea {
+	position: relative;
+	top: 2px;
+}

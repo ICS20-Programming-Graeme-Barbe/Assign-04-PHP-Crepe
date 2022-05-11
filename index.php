@@ -86,6 +86,7 @@
 				<br>
 
 				<!-- Button -->
+				<br>
 				<input type = "submit" name = "submit" value="Submit">
 				<br>
 			</form>
@@ -186,17 +187,21 @@
 							$tax = $subtotal * HST;
 							$total = $subtotal + $tax;
 
+							//Rouds variable
+							$subtotal = round($subtotal, 2);
+							$tax = round($tax, 2);
+							$total = round($total, 2);
+
 							//Displays subtotal, tax, total
-							echo "<br><p>Your subtotal is $" . $subtotal;
-							echo "<br><p>Your tax is $" . $tax;
-							echo "<br><p>Your total is $" . $total;
-							echo "<br>" . $numToppings;
+							echo "<p>Your subtotal is $" . $subtotal;
+							echo "<p>Your tax is $" . $tax;
+							echo "<p>Your total is $" . $total;
 							
 						} else {
-							echo "<br><p>Please select how many eggs you would like.</p>";
+							echo "<p>Please select how many eggs you would like.</p>";
 						}
 					} else {
-						echo "<br><p>Please select how you would like your eggs cooked.</p>";
+						echo "<p>Please select how you would like your eggs cooked.</p>";
 					}
 					
 				}
