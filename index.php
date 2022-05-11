@@ -32,6 +32,7 @@
 				echo "<center><h5>Welcome to Graeme's diner. Unfortunately the only thing we serve here is eggs. Please enter you order below and find out the cost.</h5>";
 				echo '<img src=./images/Eggs.jpg width="15%">';
 			?>
+
 			<!-- Form for selections -->
 			<form method = "post">   
 		
@@ -123,7 +124,6 @@
 					$numEggs;
 					$drinkPrice;
 
-
 					if(isset($_POST['Bacon'])) {
 						$numToppings++;
 					}
@@ -184,13 +184,14 @@
 
 							//Calculations
 							$subtotal = $eggType + $numEggs + $costToppings + $drinkPrice;
-							$tax = $subtotal * $HST;
+							$tax = $subtotal * HST;
 							$total = $subtotal + $tax;
 
 							//Displays subtotal, tax, total
 							echo "<br><p>Your subtotal is $" . $subtotal;
-							echo "<br><p>Your tax is $" . $tax . $HST;
+							echo "<br><p>Your tax is $" . $tax;
 							echo "<br><p>Your total is $" . $total;
+							echo "<br>" . $numToppings;
 							
 						} else {
 							echo "<br><p>Please select how many eggs you would like.</p>";
