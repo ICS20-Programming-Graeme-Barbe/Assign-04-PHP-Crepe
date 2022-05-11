@@ -32,10 +32,8 @@
 				echo "<center><h5>Welcome to Graeme's diner. Unfortunately the only thing we serve here is eggs. Please enter you order below and find out the cost.</h5>";
 				echo '<img src=./images/Eggs.jpg width="15%">';
 			?>
-
 			<!-- Form for selections -->
 			<form method = "post">   
-		
 				<!--  Drop down menu for how you would like your eggs -->
 				<h5>How would you like your eggs cooked?</h5>
 				<select name="eggs" id="eggs">
@@ -62,16 +60,16 @@
 				<!-- Checkbox for toppings -->
 				<br>
 				<h5>Would you like toppings with your eggs?</h5>
-				<input type="checkbox" id="Bacon" name="toppings" value="Bacon">
-				<label for="Bacon">Bacon</label>
-				<input type="checkbox" id="Cheese" name="toppings" value="Cheese">
-				<label for="Bacon">Cheese</label>
-				<input type="checkbox" id="Spinach" name="toppings" value="Spinach">
-				<label for="Spinach">Spinach</label>
-				<input type="checkbox" id="redPepper" name="toppings" value="redPepper">
-				<label for="redPepper">Red Pepper</label>
-				<input type="checkbox" id="Ham" name="toppings" value="Ham">
-				<label for="Ham">Ham</label>
+				<input type="checkbox" id="bacon" name="bacon" value="bacon">
+				<label for="bacon">Bacon</label>
+				<input type="checkbox" id="cheese" name="cheese" value="cheese">
+				<label for="cheese">Cheese</label>
+				<input type="checkbox" id="spinach" name="spinach" value="spinach">
+				<label for="spinach">Spinach</label>
+				<input type="checkbox" id="red-pepper" name="red-pepper" value="red-pepper">
+				<label for="red-pepper">Red Pepper</label>
+				<input type="checkbox" id="ham" name="ham" value="ham">
+				<label for="ham">Ham</label>
 				<br>
 
 				<!-- Radio buttons for drink -->
@@ -124,23 +122,24 @@
 					$numEggs;
 					$drinkPrice;
 
-					if(isset($_POST['Bacon'])) {
+					//Statements for number of toppings
+					if(isset($_POST["bacon"])) {
 						$numToppings++;
 					}
 
-					if(isset($_POST['Cheese'])) {
+					if(isset($_POST["cheese"])) {
 						$numToppings++;
 					}
 
-					if(isset($_POST['Spinach'])) {
+					if(isset($_POST["spinach"])) {
 						$numToppings++;
 					}
 					
-					if(isset($_POST['redPepper'])) {
+					if(isset($_POST["red-pepper"])) {
 						$numToppings++;
 					}
 
-					if(isset($_POST['Ham'])) {
+					if(isset($_POST["ham"])) {
 						$numToppings++;
 					}
 
