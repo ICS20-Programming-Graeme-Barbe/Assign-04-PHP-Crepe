@@ -115,48 +115,88 @@
 					//Variables
 					$typeOfEggs = $_POST['eggs'];
 					$numberOfEggs = $_POST['numberOfEggs'];
-					$numberOfEggs = $_POST['drink'];
+					$drink = $_POST['drink'];
+					$numToppings = 0;
 					
 					//Initializes variables
 					$eggType;
 					$numEggs;
 					$drinkPrice;
 
+
+					if(isset($_POST['Bacon'])) {
+						$numToppings++;
+					}
+
+					if(isset($_POST['Cheese'])) {
+						$numToppings++;
+					}
+
+					if(isset($_POST['Spinach'])) {
+						$numToppings++;
+					}
+					
+					if(isset($_POST['redPepper'])) {
+						$numToppings++;
+					}
+
+					if(isset($_POST['Ham'])) {
+						$numToppings++;
+					}
+
+					$costToppings = $numToppings * TOPPING_COST;
+					
 					if ($typeOfEgg != "") {
 						if ($numberOfEggs != "") {
+							
 							//If statement for how you would like your eggs cooked
 							if ($typeOfEggs == "sunnySideUp") {
-								$eggType = SUNNY_SIDE_UP
+								$eggType = SUNNY_SIDE_UP;
 							} else if ($typeOfEggs == "overEasy") {
-								$eggType = OVER_EASY
+								$eggType = OVER_EASY;
 							} else if ($typeOfEggs == "Scrambled") {
-								$eggType = SCRAMBLED
+								$eggType = SCRAMBLED;
 							} else {
-								$eggType = OMELETTE
+								$eggType = OMELETTE;
 							}
 
 							//If statement for number of eggs
 							if ($numberOfEggs == "two") {
-								$numEggs = TWO_EGGS
+								$numEggs = TWO_EGGS;
 							} else if ($numberOfEggs == "three") {
-								$numEggs = THREE_EGGS
+								$numEggs = THREE_EGGS;
 							} else if ($numberOfEggs == "four") {
-								$numEggs = FOUR_EGGS
+								$numEggs = FOUR_EGGS;
 							} else {
-								$numEggs = FIVE_EGGS
+								$numEggs = FIVE_EGGS;
 							}
 
 							//If statement for drink
 							if ($drink == "No") {
-								$drinkPrice = NO_DRINK
+								$drinkPrice = NO_DRINK;
 							} else if ($drink == "Milkshake") {
-								$drinkPrice = MILKSHAKE
+								$drinkPrice = MILKSHAKE;
 							} else if ($drink == "Coffee") {
-								$drinkPrice = COFFEE
+								$drinkPrice = COFFEE;
 							} else {
-								$drinkPrice = TEA
+								$drinkPrice = TEA;
 							}
+
+							//Calculations
+							$subtotal = $eggType + $numEggs + $costToppings + $drinkPrice;
+							$tax = $subtotal * $HST;
+							$total = $subtotal + $tax;
+
+							//Displays subtotal, tax, total
+							echo "<br><h5>Your subtotal is $" . $subtotal;
+							echo "<br><h5>Your tax is $" . $tax;
+							echo "<br><h5>Your total is $" . $total;
+							
+						} else {
+							echo "<br><p>Please select how many eggs you would like.";
 						}
+					} else {
+						echo "<br><p>Please select how you would like your eggs cooked.";
 					}
 					
 				}
