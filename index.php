@@ -32,10 +32,9 @@
 				echo "<center><h5>Welcome to Graeme's diner. Unfortunately the only thing we serve here is eggs. Please enter you order below and find out the cost.</h5>";
 				echo '<img src=./images/Eggs.jpg width="15%">';
 			?>
-	
 			<!-- Form for selections -->
 			<form method = "post">   
-				
+		
 				<!--  Drop down menu for how you would like your eggs -->
 				<h5>How would you like your eggs cooked?</h5>
 				<select name="eggs" id="eggs">
@@ -88,9 +87,10 @@
 				<br>
 
 				<!-- Button -->
-				<br>
 				<input type = "submit" name = "submit" value="Submit">
+				<br>
 			</form>
+
 			<br>
 				
 			<!-- Variables and Calculations -->
@@ -146,7 +146,7 @@
 
 					$costToppings = $numToppings * TOPPING_COST;
 					
-					if ($typeOfEgg != "") {
+					if ($typeOfEggs != "") {
 						if ($numberOfEggs != "") {
 							
 							//If statement for how you would like your eggs cooked
@@ -188,15 +188,15 @@
 							$total = $subtotal + $tax;
 
 							//Displays subtotal, tax, total
-							echo "<br><h5>Your subtotal is $" . $subtotal;
-							echo "<br><h5>Your tax is $" . $tax;
-							echo "<br><h5>Your total is $" . $total;
+							echo "<br><p>Your subtotal is $" . $subtotal;
+							echo "<br><p>Your tax is $" . $tax . $HST;
+							echo "<br><p>Your total is $" . $total;
 							
 						} else {
-							echo "<br><p>Please select how many eggs you would like.";
+							echo "<br><p>Please select how many eggs you would like.</p>";
 						}
 					} else {
-						echo "<br><p>Please select how you would like your eggs cooked.";
+						echo "<br><p>Please select how you would like your eggs cooked.</p>";
 					}
 					
 				}
